@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		325923F61051BB7D00A74D37 /* SFBInspectorPane.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923E41051BB7D00A74D37 /* SFBInspectorPane.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325923F71051BB7D00A74D37 /* SFBInspectorPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923E51051BB7D00A74D37 /* SFBInspectorPane.m */; };
+		325923F81051BB7D00A74D37 /* SFBInspectorPaneBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923E61051BB7D00A74D37 /* SFBInspectorPaneBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325923F91051BB7D00A74D37 /* SFBInspectorPaneBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923E71051BB7D00A74D37 /* SFBInspectorPaneBody.m */; };
+		325923FA1051BB7D00A74D37 /* SFBInspectorPaneHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923E81051BB7D00A74D37 /* SFBInspectorPaneHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325923FB1051BB7D00A74D37 /* SFBInspectorPaneHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923E91051BB7D00A74D37 /* SFBInspectorPaneHeader.m */; };
+		325923FE1051BB7D00A74D37 /* SFBInspectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923EC1051BB7D00A74D37 /* SFBInspectorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325923FF1051BB7D00A74D37 /* SFBInspectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923ED1051BB7D00A74D37 /* SFBInspectorView.m */; };
+		325924021051BB7D00A74D37 /* SFBViewSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923F01051BB7D00A74D37 /* SFBViewSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325924031051BB7D00A74D37 /* SFBViewSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923F11051BB7D00A74D37 /* SFBViewSelector.m */; };
+		325924041051BB7D00A74D37 /* SFBViewSelectorBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923F21051BB7D00A74D37 /* SFBViewSelectorBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325924051051BB7D00A74D37 /* SFBViewSelectorBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923F31051BB7D00A74D37 /* SFBViewSelectorBar.m */; };
+		325924061051BB7D00A74D37 /* SFBViewSelectorBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923F41051BB7D00A74D37 /* SFBViewSelectorBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325924071051BB7D00A74D37 /* SFBViewSelectorBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923F51051BB7D00A74D37 /* SFBViewSelectorBarItem.m */; };
+		325924A81051C16200A74D37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325924A71051C16200A74D37 /* QuartzCore.framework */; };
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		325923E41051BB7D00A74D37 /* SFBInspectorPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBInspectorPane.h; sourceTree = "<group>"; };
+		325923E51051BB7D00A74D37 /* SFBInspectorPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBInspectorPane.m; sourceTree = "<group>"; };
+		325923E61051BB7D00A74D37 /* SFBInspectorPaneBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBInspectorPaneBody.h; sourceTree = "<group>"; };
+		325923E71051BB7D00A74D37 /* SFBInspectorPaneBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBInspectorPaneBody.m; sourceTree = "<group>"; };
+		325923E81051BB7D00A74D37 /* SFBInspectorPaneHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBInspectorPaneHeader.h; sourceTree = "<group>"; };
+		325923E91051BB7D00A74D37 /* SFBInspectorPaneHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBInspectorPaneHeader.m; sourceTree = "<group>"; };
+		325923EA1051BB7D00A74D37 /* InspectorPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspectorPanelController.h; sourceTree = "<group>"; };
+		325923EB1051BB7D00A74D37 /* InspectorPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspectorPanelController.m; sourceTree = "<group>"; };
+		325923EC1051BB7D00A74D37 /* SFBInspectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBInspectorView.h; sourceTree = "<group>"; };
+		325923ED1051BB7D00A74D37 /* SFBInspectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBInspectorView.m; sourceTree = "<group>"; };
+		325923EE1051BB7D00A74D37 /* MetadataEditorPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataEditorPanelController.h; sourceTree = "<group>"; };
+		325923EF1051BB7D00A74D37 /* MetadataEditorPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataEditorPanelController.m; sourceTree = "<group>"; };
+		325923F01051BB7D00A74D37 /* SFBViewSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBViewSelector.h; sourceTree = "<group>"; };
+		325923F11051BB7D00A74D37 /* SFBViewSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBViewSelector.m; sourceTree = "<group>"; };
+		325923F21051BB7D00A74D37 /* SFBViewSelectorBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBViewSelectorBar.h; sourceTree = "<group>"; };
+		325923F31051BB7D00A74D37 /* SFBViewSelectorBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBViewSelectorBar.m; sourceTree = "<group>"; };
+		325923F41051BB7D00A74D37 /* SFBViewSelectorBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBViewSelectorBarItem.h; sourceTree = "<group>"; };
+		325923F51051BB7D00A74D37 /* SFBViewSelectorBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBViewSelectorBarItem.m; sourceTree = "<group>"; };
+		325924A71051C16200A74D37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		32DBCF5E0370ADEE00C91783 /* SFBInspectors_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBInspectors_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* SFBInspectors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFBInspectors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				325924A81051C16200A74D37 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* SFBInspectors.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* SFBInspectors */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = SFBInspectors;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				325923E41051BB7D00A74D37 /* SFBInspectorPane.h */,
+				325923E51051BB7D00A74D37 /* SFBInspectorPane.m */,
+				325923E61051BB7D00A74D37 /* SFBInspectorPaneBody.h */,
+				325923E71051BB7D00A74D37 /* SFBInspectorPaneBody.m */,
+				325923E81051BB7D00A74D37 /* SFBInspectorPaneHeader.h */,
+				325923E91051BB7D00A74D37 /* SFBInspectorPaneHeader.m */,
+				325923EA1051BB7D00A74D37 /* InspectorPanelController.h */,
+				325923EB1051BB7D00A74D37 /* InspectorPanelController.m */,
+				325923EC1051BB7D00A74D37 /* SFBInspectorView.h */,
+				325923ED1051BB7D00A74D37 /* SFBInspectorView.m */,
+				325923EE1051BB7D00A74D37 /* MetadataEditorPanelController.h */,
+				325923EF1051BB7D00A74D37 /* MetadataEditorPanelController.m */,
+				325923F01051BB7D00A74D37 /* SFBViewSelector.h */,
+				325923F11051BB7D00A74D37 /* SFBViewSelector.m */,
+				325923F21051BB7D00A74D37 /* SFBViewSelectorBar.h */,
+				325923F31051BB7D00A74D37 /* SFBViewSelectorBar.m */,
+				325923F41051BB7D00A74D37 /* SFBViewSelectorBarItem.h */,
+				325923F51051BB7D00A74D37 /* SFBViewSelectorBarItem.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				325924A71051C16200A74D37 /* QuartzCore.framework */,
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E79907B2D74100F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* SFBInspectors_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325923F61051BB7D00A74D37 /* SFBInspectorPane.h in Headers */,
+				325923F81051BB7D00A74D37 /* SFBInspectorPaneBody.h in Headers */,
+				325923FA1051BB7D00A74D37 /* SFBInspectorPaneHeader.h in Headers */,
+				325923FE1051BB7D00A74D37 /* SFBInspectorView.h in Headers */,
+				325924021051BB7D00A74D37 /* SFBViewSelector.h in Headers */,
+				325924041051BB7D00A74D37 /* SFBViewSelectorBar.h in Headers */,
+				325924061051BB7D00A74D37 /* SFBViewSelectorBarItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* SFBInspectors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "SFBInspectors" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFBInspectors;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = SFBInspectors;
+			productReference = 8DC2EF5B0486A6940098B216 /* SFBInspectors.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = sbooth.org;
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "SFBInspectors" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* SFBInspectors */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* SFBInspectors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325923F71051BB7D00A74D37 /* SFBInspectorPane.m in Sources */,
+				325923F91051BB7D00A74D37 /* SFBInspectorPaneBody.m in Sources */,
+				325923FB1051BB7D00A74D37 /* SFBInspectorPaneHeader.m in Sources */,
+				325923FF1051BB7D00A74D37 /* SFBInspectorView.m in Sources */,
+				325924031051BB7D00A74D37 /* SFBViewSelector.m in Sources */,
+				325924051051BB7D00A74D37 /* SFBViewSelectorBar.m in Sources */,
+				325924071051BB7D00A74D37 /* SFBViewSelectorBarItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SFBInspectors_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = SFBInspectors;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SFBInspectors_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = SFBInspectors;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "SFBInspectors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "SFBInspectors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
