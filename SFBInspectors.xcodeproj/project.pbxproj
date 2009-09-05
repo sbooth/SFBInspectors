@@ -81,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32A5454A10523764008848E8 /* Demo */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
@@ -116,12 +117,8 @@
 				325923E71051BB7D00A74D37 /* SFBInspectorPaneBody.m */,
 				325923E81051BB7D00A74D37 /* SFBInspectorPaneHeader.h */,
 				325923E91051BB7D00A74D37 /* SFBInspectorPaneHeader.m */,
-				325923EA1051BB7D00A74D37 /* InspectorPanelController.h */,
-				325923EB1051BB7D00A74D37 /* InspectorPanelController.m */,
 				325923EC1051BB7D00A74D37 /* SFBInspectorView.h */,
 				325923ED1051BB7D00A74D37 /* SFBInspectorView.m */,
-				325923EE1051BB7D00A74D37 /* MetadataEditorPanelController.h */,
-				325923EF1051BB7D00A74D37 /* MetadataEditorPanelController.m */,
 				325923F01051BB7D00A74D37 /* SFBViewSelector.h */,
 				325923F11051BB7D00A74D37 /* SFBViewSelector.m */,
 				325923F21051BB7D00A74D37 /* SFBViewSelectorBar.h */,
@@ -149,6 +146,17 @@
 				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32A5454A10523764008848E8 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				325923EA1051BB7D00A74D37 /* InspectorPanelController.h */,
+				325923EB1051BB7D00A74D37 /* InspectorPanelController.m */,
+				325923EE1051BB7D00A74D37 /* MetadataEditorPanelController.h */,
+				325923EF1051BB7D00A74D37 /* MetadataEditorPanelController.m */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
