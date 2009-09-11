@@ -19,61 +19,60 @@
 	return [super initWithWindowNibName:@"MetadataEditorPanel"];
 }
 
-- (void) awakeFromNib
+- (void) windowDidLoad
 {
-	if(!_albumMetadata)
-		return;
+	[[self window] setMovableByWindowBackground:YES];
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:NSApplicationWillTerminateNotification object:nil];
 	
 	SFBViewSelectorBarItem *item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.AlbumMetadata" 
-																  label:NSLocalizedString(@"Album Metadata", @"")
-																tooltip:NSLocalizedString(@"Album Metadata", @"")
-																  image:[NSImage imageNamed:@"AlbumMetadataEditorPaneIcon"]
-																   view:_albumMetadata];
+																		label:NSLocalizedString(@"Album Metadata", @"")
+																	  tooltip:NSLocalizedString(@"Album Metadata", @"")
+																		image:[NSImage imageNamed:@"AlbumMetadataEditorPaneIcon"]
+																		 view:_albumMetadata];
 	
 	[[_viewSelector selectorBar] addItem:item];
-
+	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.TrackMetadata" 
-											 label:NSLocalizedString(@"Track Metadata", @"")
-										   tooltip:NSLocalizedString(@"Track Metadata", @"")
-											 image:[NSImage imageNamed:@"TrackMetadataEditorPaneIcon"]
-											  view:_trackMetadata];
+												label:NSLocalizedString(@"Track Metadata", @"")
+											  tooltip:NSLocalizedString(@"Track Metadata", @"")
+												image:[NSImage imageNamed:@"TrackMetadataEditorPaneIcon"]
+												 view:_trackMetadata];
 	
 	[[_viewSelector selectorBar] addItem:item];
 	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.AlbumArt" 
-											 label:NSLocalizedString(@"Album Art", @"")
-										   tooltip:NSLocalizedString(@"Album Art", @"")
-											 image:[NSImage imageNamed:@"AlbumArtEditorPaneIcon"]
-											  view:_albumArt];
+												label:NSLocalizedString(@"Album Art", @"")
+											  tooltip:NSLocalizedString(@"Album Art", @"")
+												image:[NSImage imageNamed:@"AlbumArtEditorPaneIcon"]
+												 view:_albumArt];
 	
 	[[_viewSelector selectorBar] addItem:item];
-
+	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.Lyrics" 
-											 label:NSLocalizedString(@"Lyrics", @"")
-										   tooltip:NSLocalizedString(@"Lyrics", @"")
-											 image:[NSImage imageNamed:@"LyricsMetadataEditorPaneIcon"]
-											  view:_lyrics];
+												label:NSLocalizedString(@"Lyrics", @"")
+											  tooltip:NSLocalizedString(@"Lyrics", @"")
+												image:[NSImage imageNamed:@"LyricsMetadataEditorPaneIcon"]
+												 view:_lyrics];
 	
 	[[_viewSelector selectorBar] addItem:item];
-
+	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.AdditionalAlbumMetadata" 
-											 label:NSLocalizedString(@"Additional Album Metadata", @"")
-										   tooltip:NSLocalizedString(@"Additional Album Metadata", @"")
-											 image:[NSImage imageNamed:@"AdditionalAlbumMetadataEditorPaneIcon"]
-											  view:_additionalAlbumMetadata];
+												label:NSLocalizedString(@"Additional Album Metadata", @"")
+											  tooltip:NSLocalizedString(@"Additional Album Metadata", @"")
+												image:[NSImage imageNamed:@"AdditionalAlbumMetadataEditorPaneIcon"]
+												 view:_additionalAlbumMetadata];
 	
 	[[_viewSelector selectorBar] addItem:item];
-
+	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.AdditionalTrackMetadata" 
-											 label:NSLocalizedString(@"Additional Track Metadata", @"")
-										   tooltip:NSLocalizedString(@"Additional Track Metadata", @"")
-											 image:[NSImage imageNamed:@"AdditionalTrackMetadataEditorPaneIcon"]
-											  view:_additionalTrackMetadata];
+												label:NSLocalizedString(@"Additional Track Metadata", @"")
+											  tooltip:NSLocalizedString(@"Additional Track Metadata", @"")
+												image:[NSImage imageNamed:@"AdditionalTrackMetadataEditorPaneIcon"]
+												 view:_additionalTrackMetadata];
 	
 	[[_viewSelector selectorBar] addItem:item];
-
+	
 	// Restore the selected pane
 	NSString *autosaveName = [[self window] frameAutosaveName];
 	if(autosaveName) {
@@ -82,13 +81,8 @@
 		
 		if(selectedIdentifier)
 			[[_viewSelector selectorBar] selectItemWithIdentifer:selectedIdentifier];
-	}	
-}
-
-- (void) windowDidLoad
-{
-	[[self window] setMovableByWindowBackground:YES];
-
+	}
+	
 	[super windowDidLoad];
 }
 

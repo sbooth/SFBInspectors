@@ -13,19 +13,13 @@
 	return [super initWithWindowNibName:@"InspectorPanel"];
 }
 
-- (void) awakeFromNib
-{
-	if(!_trackView)
-		return;
-	
-	[_inspectorView addInspectorPane:_trackView title:NSLocalizedString(@"Track Information", @"The name of the track inspector panel")];
-	[_inspectorView addInspectorPane:_discView title:NSLocalizedString(@"Disc Information", @"The name of the disc inspector panel")];
-	[_inspectorView addInspectorPane:_driveView title:NSLocalizedString(@"Drive Information", @"The name of the drive inspector panel")];
-}
-
 - (void) windowDidLoad
 {
 	[[self window] setMovableByWindowBackground:YES];
+
+	[_inspectorView addInspectorPane:_trackView title:NSLocalizedString(@"Track Information", @"The name of the track inspector panel")];
+	[_inspectorView addInspectorPane:_discView title:NSLocalizedString(@"Disc Information", @"The name of the disc inspector panel")];
+	[_inspectorView addInspectorPane:_driveView title:NSLocalizedString(@"Drive Information", @"The name of the drive inspector panel")];
 	
 	[super windowDidLoad];
 }
