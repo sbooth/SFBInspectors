@@ -6,6 +6,7 @@
 #import "SFBInspectorPaneHeader.h"
 #import "SFBInspectorPane.h"
 
+#define USE_ALTERNATE_APPEARANCE 0
 #define DISCLOSURE_BUTTON_SIZE 13
 
 @interface SFBInspectorPaneHeader (Private)
@@ -194,6 +195,13 @@
 	[_titleTextField setBordered:NO];
 	[_titleTextField setDrawsBackground:NO];
 	
+	// Set up accessibility so the title is associated with the disclosure button
+	id titleTextFieldElement = NSAccessibilityUnignoredDescendant(_titleTextField);
+	id disclosureButtonElement = NSAccessibilityUnignoredDescendant(_disclosureButton);
+
+	[disclosureButtonElement accessibilitySetOverrideValue:titleTextFieldElement forAttribute:NSAccessibilityTitleUIElementAttribute];
+	[titleTextFieldElement accessibilitySetOverrideValue:[NSArray arrayWithObject:disclosureButtonElement] forAttribute:NSAccessibilityServesAsTitleForUIElementsAttribute];
+
 	[self addSubview:_disclosureButton];
 	[self addSubview:_titleTextField];
 }
