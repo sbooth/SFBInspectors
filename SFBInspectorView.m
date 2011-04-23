@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -13,6 +13,13 @@
 @end
 
 @implementation SFBInspectorView
+
+- (void) dealloc
+{
+	[_paneControllers release], _paneControllers = nil;
+
+	[super dealloc];
+}
 
 - (void) awakeFromNib
 {
@@ -60,6 +67,19 @@
 	if([subview isKindOfClass:[SFBInspectorPane class]]) {
 		[subview setPostsFrameChangedNotifications:NO];
 		[[NSNotificationCenter defaultCenter] removeObserver:self name:NSViewFrameDidChangeNotification object:subview];
+
+		// Remove the view's controller from our list of view controllers
+		// It would be too convenient if NSView had a - (NSViewController *) viewController method!
+		NSViewController *paneController = nil;
+		for(NSViewController *viewController in _paneControllers) {
+			if([[viewController view] isDescendantOf:subview]) {
+				paneController = viewController;
+				break;
+			}
+		}
+
+		if(paneController)
+			[_paneControllers removeObject:paneController];
 	}
 }
 
@@ -69,7 +89,32 @@
 {
 	NSParameterAssert(nil != paneController);
 	
-	[self addInspectorPane:[paneController view] title:[paneController title]];
+	if(nil == _paneControllers)
+		_paneControllers = [[NSMutableArray alloc] init];
+
+	[_paneControllers addObject:paneController];
+
+	NSRect paneFrame;
+
+	NSView *paneBody = [paneController view];
+	NSString *title = [paneController title];
+
+	// Constrain the pane to our width and add extra height for the header
+	paneFrame.size.width = [self frame].size.width;
+	paneFrame.size.height = [paneBody frame].size.height + INSPECTOR_PANE_HEADER_HEIGHT;
+
+	// This origin is never used; layoutSubviews will calculate the correct origin
+	paneFrame.origin = NSZeroPoint;
+
+	SFBInspectorPane *pane = [[[SFBInspectorPane alloc] initWithFrame:paneFrame] autorelease];
+
+	[pane setTitle:title];
+	[[pane bodyView] addSubview:paneBody];
+
+	[self addSubview:pane];	
+
+	// Lay out the panes correctly
+	[self layoutSubviews];
 	
 }
 
@@ -78,24 +123,11 @@
 	NSParameterAssert(nil != paneBody);
 	NSParameterAssert(nil != title);
 
-	NSRect paneFrame;
+	NSViewController *vc = [[[NSViewController alloc] init] autorelease];
+	[vc setView:paneBody];
+	[vc setTitle:title];
 	
-	// Constrain the pane to our width and add extra height for the header
-	paneFrame.size.width = [self frame].size.width;
-	paneFrame.size.height = [paneBody frame].size.height + INSPECTOR_PANE_HEADER_HEIGHT;
-
-	// This origin is never used; layoutSubviews will calculate the correct origin
-	paneFrame.origin = NSZeroPoint;
-	
-	SFBInspectorPane *pane = [[[SFBInspectorPane alloc] initWithFrame:paneFrame] autorelease];
-	
-	[pane setTitle:title];
-	[[pane bodyView] addSubview:paneBody];
-	
-	[self addSubview:pane];	
-	
-	// Lay out the panes correctly
-	[self layoutSubviews];
+	[self addInspectorPaneController:vc];
 }
 
 @end

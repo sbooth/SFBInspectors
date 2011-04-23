@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -9,6 +9,7 @@
 {
 @private
 	NSSize _initialWindowSize;
+	NSMutableArray *_paneControllers;
 }
 
 - (void) addInspectorPaneController:(NSViewController *)paneController;
