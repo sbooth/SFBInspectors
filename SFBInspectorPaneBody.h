@@ -6,10 +6,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface SFBInspectorPaneBody : NSView
-{
-@private
-	CGFloat _normalHeight;
-}
+{}
 
 @property (readonly, assign) CGFloat normalHeight;
 

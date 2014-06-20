@@ -5,6 +5,15 @@
 
 #import "SFBInspectorView.h"
 #import "SFBInspectorPane.h"
+#import "SFBInspectorPaneBody.h"
+
+@interface SFBInspectorView ()
+{
+@private
+	NSSize _initialWindowSize;
+	NSMutableArray *_paneControllers;
+}
+@end
 
 @interface SFBInspectorView (Private)
 - (void) inspectorPaneFrameDidChange:(NSNotification *)notification;
@@ -13,13 +22,6 @@
 @end
 
 @implementation SFBInspectorView
-
-- (void) dealloc
-{
-	[_paneControllers release], _paneControllers = nil;
-
-	[super dealloc];
-}
 
 - (void) awakeFromNib
 {
@@ -106,7 +108,7 @@
 	// This origin is never used; layoutSubviews will calculate the correct origin
 	paneFrame.origin = NSZeroPoint;
 
-	SFBInspectorPane *pane = [[[SFBInspectorPane alloc] initWithFrame:paneFrame] autorelease];
+	SFBInspectorPane *pane = [[SFBInspectorPane alloc] initWithFrame:paneFrame];
 
 	[pane setTitle:title];
 	[[pane bodyView] addSubview:paneBody];
@@ -123,7 +125,7 @@
 	NSParameterAssert(nil != paneBody);
 	NSParameterAssert(nil != title);
 
-	NSViewController *vc = [[[NSViewController alloc] init] autorelease];
+	NSViewController *vc = [[NSViewController alloc] init];
 	[vc setView:paneBody];
 	[vc setTitle:title];
 	

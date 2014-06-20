@@ -8,12 +8,7 @@
 @class SFBInspectorPane;
 
 @interface SFBInspectorPaneHeader : NSView
-{
-@private
-	BOOL _pressed;
-	NSButton *_disclosureButton;
-	NSTextField *_titleTextField;
-}
+{}
 
 - (NSString *) title;
 - (void) setTitle:(NSString *)title;

@@ -8,15 +8,10 @@
 @class SFBViewSelectorBarItem;
 
 @interface SFBViewSelectorBar : NSView
-{
-@private
-	NSInteger _selectedIndex;
-	NSInteger _pressedIndex;
-	NSMutableArray *_items;
-}
+{}
 
 @property (assign) NSInteger selectedIndex;
-@property (readonly) SFBViewSelectorBarItem * selectedItem;
+@property (weak, readonly) SFBViewSelectorBarItem * selectedItem;
 
 - (void) addItem:(SFBViewSelectorBarItem *)item;
 

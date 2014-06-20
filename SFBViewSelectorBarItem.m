@@ -7,15 +7,9 @@
 
 @implementation SFBViewSelectorBarItem
 
-@synthesize identifier = _identifier;
-@synthesize label = _label;
-@synthesize tooltip = _tooltip;
-@synthesize image = _image;
-@synthesize view = _view;
-
 + (id) itemWithIdentifier:(NSString *)identifier label:(NSString *)label tooltip:(NSString *)tooltip image:(NSImage *)image view:(NSView *)view
 {
-	return [[[SFBViewSelectorBarItem alloc] initWithIdentifier:identifier label:label tooltip:tooltip image:image view:view] autorelease];
+	return [[SFBViewSelectorBarItem alloc] initWithIdentifier:identifier label:label tooltip:tooltip image:image view:view];
 }
 
 - (id) initWithIdentifier:(NSString *)identifier label:(NSString *)label tooltip:(NSString *)tooltip image:(NSImage *)image view:(NSView *)view
@@ -33,17 +27,6 @@
 	}
 	
 	return self;
-}
-
-- (void) dealloc
-{
-	[_identifier release], _identifier = nil;
-	[_label release], _label = nil;
-	[_tooltip release], _tooltip = nil;
-	[_image release], _image = nil;
-	[_view release], _view = nil;
-	
-	[super dealloc];
 }
 
 @end

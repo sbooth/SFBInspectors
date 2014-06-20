@@ -9,6 +9,15 @@
 #define USE_ALTERNATE_APPEARANCE 0
 #define DISCLOSURE_BUTTON_SIZE 13
 
+@interface SFBInspectorPaneHeader ()
+{
+@private
+	BOOL _pressed;
+	NSButton *_disclosureButton;
+	NSTextField *_titleTextField;
+}
+@end
+
 @interface SFBInspectorPaneHeader (Private)
 - (void) createDisclosureButtonAndLabel;
 #if USE_ALTERNATE_APPEARANCE
@@ -24,14 +33,6 @@
 	if((self = [super initWithFrame:frameRect]))
 		[self createDisclosureButtonAndLabel];
 	return self;
-}
-
-- (void) dealloc
-{
-	[_disclosureButton release], _disclosureButton = nil;
-	[_titleTextField release], _titleTextField = nil;
-	
-	[super dealloc];
 }
 
 - (BOOL) mouseDownCanMoveWindow
@@ -70,7 +71,7 @@
 #else
 	NSColor *startColor = [NSColor colorWithCalibratedWhite:0.880f alpha:1.f];
 	NSColor *endColor = [NSColor colorWithCalibratedWhite:0.773f alpha:1.f];
-	NSGradient *gradient = [[[NSGradient alloc] initWithStartingColor:startColor endingColor:endColor] autorelease];
+	NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:startColor endingColor:endColor];
 	
 	NSColor *topBorderColorAbove = [NSColor colorWithCalibratedWhite:0.659f alpha:1.f];
 	NSColor *topBorderColorBelow = [NSColor colorWithCalibratedWhite:0.925f alpha:1.f];
@@ -159,12 +160,12 @@
 
 - (NSButton *) disclosureButton
 {
-	return [[_disclosureButton retain] autorelease];
+	return _disclosureButton;
 }
 
 - (NSTextField *) titleTextField
 {
-	return [[_titleTextField retain] autorelease];
+	return _titleTextField;
 }
 
 @end

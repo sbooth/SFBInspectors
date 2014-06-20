@@ -15,6 +15,14 @@ enum {
 	eCellSelectedState = 2
 };
 
+@interface SFBViewSelectorBar ()
+{
+@private
+	NSInteger _pressedIndex;
+	NSMutableArray *_items;
+}
+@end
+
 @interface SFBViewSelectorBar (Private)
 - (void) drawGridLines;
 - (void) drawBackground;
@@ -23,8 +31,6 @@ enum {
 @end
 
 @implementation SFBViewSelectorBar
-
-@synthesize selectedIndex = _selectedIndex;
 
 - (id) initWithFrame:(NSRect)frameRect
 {
@@ -44,13 +50,6 @@ enum {
 		_pressedIndex = -1;
 	}
 	return self;
-}
-
-- (void) dealloc
-{
-	[_items release], _items = nil;
-	
-	[super dealloc];
 }
 
 - (void) drawRect:(NSRect)rect
@@ -217,7 +216,7 @@ enum {
 	
 	for(SFBViewSelectorBarItem *item in _items) {
 		if([[item identifier] isEqualToString:itemIdentifier])
-			return [[item retain] autorelease];
+			return item;
 	}
 	
 	return nil;
@@ -269,7 +268,7 @@ enum {
 	NSColor *topColor = [NSColor colorWithCalibratedWhite:0.84f alpha:1.f];
 	NSColor *bottomColor = [NSColor /*windowBackgroundColor*/colorWithCalibratedWhite:0.9f alpha:1.f];
 	
-	NSGradient *gradient = [[[NSGradient alloc] initWithStartingColor:topColor endingColor:bottomColor] autorelease];
+	NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:topColor endingColor:bottomColor];
 	
 	NSRect bounds = [self bounds];
 	

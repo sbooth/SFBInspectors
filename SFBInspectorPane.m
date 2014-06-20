@@ -14,6 +14,11 @@
 #define SLOW_ANIMATION_DURATION (8 * ANIMATION_DURATION)
 
 @interface SFBInspectorPane ()
+{
+@private
+	SFBInspectorPaneHeader *_headerView;
+	SFBInspectorPaneBody *_bodyView;
+}
 @property (assign, getter=isCollapsed) BOOL collapsed;
 @end
 
@@ -23,21 +28,11 @@
 
 @implementation SFBInspectorPane
 
-@synthesize collapsed = _collapsed;
-
 - (id) initWithFrame:(NSRect)frame
 {
 	if((self = [super initWithFrame:frame]))
 		[self createHeaderAndBody];
 	return self;
-}
-
-- (void) dealloc
-{
-	[_headerView release], _headerView = nil;
-	[_bodyView release], _bodyView = nil;
-	
-	[super dealloc];
 }
 
 - (void) awakeFromNib
@@ -92,7 +87,7 @@
 			frameSizeAnimation.duration = shiftPressed ? SLOW_ANIMATION_DURATION : ANIMATION_DURATION;
 			frameSizeAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 			
-			[[self animator] setAnimations:[NSDictionary dictionaryWithObject:[frameSizeAnimation autorelease] forKey:@"frameSize"]];
+			[[self animator] setAnimations:[NSDictionary dictionaryWithObject:frameSizeAnimation forKey:@"frameSize"]];
 		}
 		
 		[[self animator] setFrame:newFrame];
@@ -103,12 +98,12 @@
 
 - (SFBInspectorPaneHeader *) headerView
 {
-	return [[_headerView retain] autorelease];
+	return _headerView;
 }
 
 - (SFBInspectorPaneBody *) bodyView
 {
-	return [[_bodyView retain] autorelease];
+	return _bodyView;
 }
 
 @end

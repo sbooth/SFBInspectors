@@ -10,12 +10,7 @@
 @class SFBViewSelectorBar;
 
 @interface SFBViewSelector : NSView
-{
-@private
-	NSSize _initialWindowSize;
-	SFBViewSelectorBar *_selectorBar;
-	NSView *_bodyView;
-}
+{}
 
 - (SFBViewSelectorBar *) selectorBar;
 

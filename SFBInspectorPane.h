@@ -10,12 +10,7 @@
 @class SFBInspectorPaneHeader, SFBInspectorPaneBody;
 
 @interface SFBInspectorPane : NSView
-{
-@private
-	BOOL _collapsed;
-	SFBInspectorPaneHeader *_headerView;
-	SFBInspectorPaneBody *_bodyView;
-}
+{}
 
 @property (readonly, assign, getter=isCollapsed) BOOL collapsed;
 

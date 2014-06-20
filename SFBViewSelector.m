@@ -9,6 +9,15 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+@interface SFBViewSelector ()
+{
+@private
+	NSSize _initialWindowSize;
+	SFBViewSelectorBar *_selectorBar;
+	NSView *_bodyView;
+}
+@end
+
 @interface SFBViewSelector (Private)
 - (void) createSelectorBarAndBody;
 - (void) applicationWillTerminate:(NSNotification *)notification;
@@ -28,14 +37,6 @@
 	if((self = [super initWithCoder:decoder]))
 		[self createSelectorBarAndBody];
 	return self;
-}
-
-- (void) dealloc
-{
-	[_selectorBar release], _selectorBar = nil;
-	[_bodyView release], _bodyView = nil;
-	
-	[super dealloc];
 }
 
 - (void) awakeFromNib
@@ -141,7 +142,7 @@
 
 - (SFBViewSelectorBar *) selectorBar
 {
-	return [[_selectorBar retain] autorelease];
+	return _selectorBar;
 }
 
 @end
