@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -17,9 +17,9 @@
 {
 	[[self window] setMovableByWindowBackground:YES];
 
-	[_inspectorView addInspectorPane:_trackView title:NSLocalizedString(@"Track Information", @"The name of the track inspector panel")];
-	[_inspectorView addInspectorPane:_discView title:NSLocalizedString(@"Disc Information", @"The name of the disc inspector panel")];
-	[_inspectorView addInspectorPane:_driveView title:NSLocalizedString(@"Drive Information", @"The name of the drive inspector panel")];
+	[self.inspectorView addInspectorPane:self.trackView title:NSLocalizedString(@"Track Information", @"The name of the track inspector panel")];
+	[self.inspectorView addInspectorPane:self.discView title:NSLocalizedString(@"Disc Information", @"The name of the disc inspector panel")];
+	[self.inspectorView addInspectorPane:self.driveView title:NSLocalizedString(@"Drive Information", @"The name of the drive inspector panel")];
 	
 	[super windowDidLoad];
 }

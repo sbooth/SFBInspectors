@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -8,15 +8,16 @@
 @class SFBViewSelector;
 
 @interface MetadataEditorPanelController : NSWindowController
-{
-	IBOutlet SFBViewSelector * _viewSelector;
-	IBOutlet NSView * _albumMetadata;
-	IBOutlet NSView * _trackMetadata;
-	IBOutlet NSView * _albumArt;
-	IBOutlet NSView * _lyrics;
-	IBOutlet NSView * _additionalAlbumMetadata;
-	IBOutlet NSView * _additionalTrackMetadata;
-}
+{}
+
+@property (nonatomic, weak) IBOutlet SFBViewSelector * viewSelector;
+
+@property (nonatomic, weak) IBOutlet NSView * albumMetadata;
+@property (nonatomic, weak) IBOutlet NSView * trackMetadata;
+@property (nonatomic, weak) IBOutlet NSView * albumArt;
+@property (nonatomic, weak) IBOutlet NSView * lyrics;
+@property (nonatomic, weak) IBOutlet NSView * additionalAlbumMetadata;
+@property (nonatomic, weak) IBOutlet NSView * additionalTrackMetadata;
 
 // ========================================
 // Action Methods

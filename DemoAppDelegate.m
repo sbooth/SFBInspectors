@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -9,18 +9,11 @@
 
 @implementation DemoAppDelegate
 
-- (id) init
-{
-	if(!(self = [super init]))
-		return nil;
-
-	return self;
-}
-
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	[_inspectorPanel showWindow:self];
-	[_metadataPanel showWindow:self];
+#pragma unused(aNotification)
+	[self.inspectorPanel showWindow:self];
+	[self.metadataPanel showWindow:self];
 }
 
 @end

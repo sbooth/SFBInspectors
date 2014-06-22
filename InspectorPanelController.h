@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -8,12 +8,13 @@
 @class SFBInspectorView;
 
 @interface InspectorPanelController : NSWindowController
-{
-	IBOutlet SFBInspectorView * _inspectorView;
-	IBOutlet NSView *_trackView;
-	IBOutlet NSView *_discView;
-	IBOutlet NSView *_driveView;
-}
+{}
+
+@property (nonatomic, weak) IBOutlet SFBInspectorView * inspectorView;
+
+@property (nonatomic, weak) IBOutlet NSView * trackView;
+@property (nonatomic, weak) IBOutlet NSView * discView;
+@property (nonatomic, weak) IBOutlet NSView * driveView;
 
 // ========================================
 // Action Methods

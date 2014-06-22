@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -31,7 +31,7 @@
 																		image:[NSImage imageNamed:@"AlbumMetadataEditorPaneIcon"]
 																		 view:_albumMetadata];
 	
-	[[_viewSelector selectorBar] addItem:item];
+	[[self.viewSelector selectorBar] addItem:item];
 	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.TrackMetadata" 
 												label:NSLocalizedString(@"Track Metadata", @"")
@@ -39,7 +39,7 @@
 												image:[NSImage imageNamed:@"TrackMetadataEditorPaneIcon"]
 												 view:_trackMetadata];
 	
-	[[_viewSelector selectorBar] addItem:item];
+	[[self.viewSelector selectorBar] addItem:item];
 	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.AlbumArt" 
 												label:NSLocalizedString(@"Album Art", @"")
@@ -47,7 +47,7 @@
 												image:[NSImage imageNamed:@"AlbumArtEditorPaneIcon"]
 												 view:_albumArt];
 	
-	[[_viewSelector selectorBar] addItem:item];
+	[[self.viewSelector selectorBar] addItem:item];
 	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.Lyrics" 
 												label:NSLocalizedString(@"Lyrics", @"")
@@ -55,7 +55,7 @@
 												image:[NSImage imageNamed:@"LyricsMetadataEditorPaneIcon"]
 												 view:_lyrics];
 	
-	[[_viewSelector selectorBar] addItem:item];
+	[[self.viewSelector selectorBar] addItem:item];
 	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.AdditionalAlbumMetadata" 
 												label:NSLocalizedString(@"Additional Album Metadata", @"")
@@ -63,7 +63,7 @@
 												image:[NSImage imageNamed:@"AdditionalAlbumMetadataEditorPaneIcon"]
 												 view:_additionalAlbumMetadata];
 	
-	[[_viewSelector selectorBar] addItem:item];
+	[[self.viewSelector selectorBar] addItem:item];
 	
 	item = [SFBViewSelectorBarItem itemWithIdentifier:@"org.sbooth.Inspectors.MetadataEditor.AdditionalTrackMetadata" 
 												label:NSLocalizedString(@"Additional Track Metadata", @"")
@@ -71,7 +71,7 @@
 												image:[NSImage imageNamed:@"AdditionalTrackMetadataEditorPaneIcon"]
 												 view:_additionalTrackMetadata];
 	
-	[[_viewSelector selectorBar] addItem:item];
+	[[self.viewSelector selectorBar] addItem:item];
 	
 	// Restore the selected pane
 	NSString *autosaveName = [[self window] frameAutosaveName];
@@ -80,7 +80,7 @@
 		NSString *selectedIdentifier = [[NSUserDefaults standardUserDefaults] stringForKey:selectedPaneDefaultsName];
 		
 		if(selectedIdentifier)
-			[[_viewSelector selectorBar] selectItemWithIdentifer:selectedIdentifier];
+			[[self.viewSelector selectorBar] selectItemWithIdentifer:selectedIdentifier];
 	}
 	
 	[super windowDidLoad];
@@ -131,7 +131,7 @@
 	// Save the selected pane
 	NSString *autosaveName = [[self window] frameAutosaveName];
 	if(autosaveName) {
-		NSString *selectedIdentifier = [[[_viewSelector selectorBar] selectedItem] identifier];
+		NSString *selectedIdentifier = [[[self.viewSelector selectorBar] selectedItem] identifier];
 		NSString *selectedPaneDefaultsName = [autosaveName stringByAppendingFormat:@" Selected Pane"];
 		
 		[[NSUserDefaults standardUserDefaults] setValue:selectedIdentifier forKey:selectedPaneDefaultsName];
