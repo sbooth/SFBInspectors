@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -8,11 +8,11 @@
 @interface SFBViewSelectorBarItem : NSObject
 {}
 
-@property (copy) NSString * identifier;
-@property (copy) NSString * label;
-@property (copy) NSString * tooltip;
-@property (copy) NSImage * image;
-@property (strong) NSView * view;
+@property (nonatomic, copy) NSString * identifier;
+@property (nonatomic, copy) NSString * label;
+@property (nonatomic, copy) NSString * tooltip;
+@property (nonatomic, copy) NSImage * image;
+@property (nonatomic, strong) NSView * view;
 
 + (id) itemWithIdentifier:(NSString *)identifier label:(NSString *)label tooltip:(NSString *)tooltip image:(NSImage *)image view:(NSView *)view;
 

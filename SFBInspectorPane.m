@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Stephen F. Booth <me@sbooth.org>
+ *  Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014 Stephen F. Booth <me@sbooth.org>
  *  All Rights Reserved
  */
 
@@ -19,7 +19,7 @@
 	SFBInspectorPaneHeader *_headerView;
 	SFBInspectorPaneBody *_bodyView;
 }
-@property (assign, getter=isCollapsed) BOOL collapsed;
+@property (nonatomic, assign, getter=isCollapsed) BOOL collapsed;
 @end
 
 @interface SFBInspectorPane (Private)
