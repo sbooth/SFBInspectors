@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3234921B1A55D07100FEC47B /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 3234921A1A55D07100FEC47B /* COPYING */; };
 		325923F61051BB7D00A74D37 /* SFBInspectorPane.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923E41051BB7D00A74D37 /* SFBInspectorPane.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		325923F71051BB7D00A74D37 /* SFBInspectorPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 325923E51051BB7D00A74D37 /* SFBInspectorPane.m */; };
 		325923F81051BB7D00A74D37 /* SFBInspectorPaneBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 325923E61051BB7D00A74D37 /* SFBInspectorPaneBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,6 +59,7 @@
 		3202BC041174CD1E00F359F6 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		3202BC051174CD1E00F359F6 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		3202BC061174CD1E00F359F6 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3234921A1A55D07100FEC47B /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		325923E41051BB7D00A74D37 /* SFBInspectorPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBInspectorPane.h; sourceTree = "<group>"; };
 		325923E51051BB7D00A74D37 /* SFBInspectorPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBInspectorPane.m; sourceTree = "<group>"; };
 		325923E61051BB7D00A74D37 /* SFBInspectorPaneBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBInspectorPaneBody.h; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		0867D691FE84028FC02AAC07 /* SFBInspectors */ = {
 			isa = PBXGroup;
 			children = (
+				3234921A1A55D07100FEC47B /* COPYING */,
 				08FB77AEFE84172EC02AAC07 /* Framework */,
 				32A5454A10523764008848E8 /* Demo */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -314,7 +317,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = sbooth.org;
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "SFBInspectors" */;
@@ -359,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3234921B1A55D07100FEC47B /* COPYING in Resources */,
 				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +488,9 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -500,7 +506,9 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
