@@ -37,13 +37,13 @@
 
 @property (nonatomic, readonly, assign, getter=isCollapsed) BOOL collapsed;
 
-- (NSString *) title;
-- (void) setTitle:(NSString *)title;
+- (nonnull NSString *) title;
+- (void) setTitle:(nonnull NSString *)title;
 
-- (IBAction) toggleCollapsed:(id)sender;
+- (IBAction) toggleCollapsed:(nullable id)sender;
 - (void) setCollapsed:(BOOL)collapsed animate:(BOOL)animate;
 
-- (SFBInspectorPaneHeader *) headerView;
-- (SFBInspectorPaneBody *) bodyView;
+- (nonnull SFBInspectorPaneHeader *) headerView;
+- (nonnull SFBInspectorPaneBody *) bodyView;
 
 @end

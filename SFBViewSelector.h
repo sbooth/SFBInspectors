@@ -34,6 +34,6 @@
 @interface SFBViewSelector : NSView
 {}
 
-- (SFBViewSelectorBar *) selectorBar;
+- (nonnull SFBViewSelectorBar *) selectorBar;
 
 @end

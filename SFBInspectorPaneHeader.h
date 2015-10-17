@@ -32,10 +32,10 @@
 @interface SFBInspectorPaneHeader : NSView
 {}
 
-- (NSString *) title;
-- (void) setTitle:(NSString *)title;
+- (nonnull NSString *) title;
+- (void) setTitle:(nonnull NSString *)title;
 
-- (NSButton *) disclosureButton;
-- (NSTextField *) titleTextField;
+- (nonnull NSButton *) disclosureButton;
+- (nonnull NSTextField *) titleTextField;
 
 @end

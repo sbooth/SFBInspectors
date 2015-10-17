@@ -35,12 +35,12 @@
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, weak, readonly) SFBViewSelectorBarItem * selectedItem;
 
-- (void) addItem:(SFBViewSelectorBarItem *)item;
+- (void) addItem:(nonnull SFBViewSelectorBarItem *)item;
 
-- (BOOL) selectItem:(SFBViewSelectorBarItem *)item;
-- (BOOL) selectItemWithIdentifer:(NSString *)itemIdentifier;
+- (BOOL) selectItem:(nonnull SFBViewSelectorBarItem *)item;
+- (BOOL) selectItemWithIdentifer:(nonnull NSString *)itemIdentifier;
 
-- (SFBViewSelectorBarItem *) itemAtIndex:(NSInteger)itemIndex;
-- (SFBViewSelectorBarItem *) itemWithIdentifier:(NSString *)itemIdentifier;
+- (nullable SFBViewSelectorBarItem *) itemAtIndex:(NSInteger)itemIndex;
+- (nullable SFBViewSelectorBarItem *) itemWithIdentifier:(nonnull NSString *)itemIdentifier;
 
 @end

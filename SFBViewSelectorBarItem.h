@@ -30,14 +30,14 @@
 @interface SFBViewSelectorBarItem : NSObject
 {}
 
-@property (nonatomic, copy) NSString * identifier;
-@property (nonatomic, copy) NSString * label;
-@property (nonatomic, copy) NSString * tooltip;
-@property (nonatomic, copy) NSImage * image;
-@property (nonatomic, strong) NSView * view;
+@property (nonatomic, copy, nonnull) NSString * identifier;
+@property (nonatomic, copy, nonnull) NSString * label;
+@property (nonatomic, copy, nullable) NSString * tooltip;
+@property (nonatomic, copy, nullable) NSImage * image;
+@property (nonatomic, strong, nullable) NSView * view;
 
-+ (id) itemWithIdentifier:(NSString *)identifier label:(NSString *)label tooltip:(NSString *)tooltip image:(NSImage *)image view:(NSView *)view;
++ (nonnull id) itemWithIdentifier:(nonnull NSString *)identifier label:(nonnull NSString *)label tooltip:(nullable NSString *)tooltip image:(nullable NSImage *)image view:(nullable NSView *)view;
 
-- (id) initWithIdentifier:(NSString *)identifier label:(NSString *)label tooltip:(NSString *)tooltip image:(NSImage *)image view:(NSView *)view;
+- (nonnull id) initWithIdentifier:(nonnull NSString *)identifier label:(nonnull NSString *)label tooltip:(nullable NSString *)tooltip image:(nullable NSImage *)image view:(nullable NSView *)view;
 
 @end

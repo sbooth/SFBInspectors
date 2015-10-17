@@ -30,7 +30,7 @@
 @interface SFBInspectorView : NSView
 {}
 
-- (void) addInspectorPaneController:(NSViewController *)paneController;
-- (void) addInspectorPane:(NSView *)paneBody title:(NSString *)title;
+- (void) addInspectorPaneController:(nonnull NSViewController *)paneController;
+- (void) addInspectorPane:(nonnull NSView *)paneBody title:(nonnull NSString *)title;
 
 @end
